@@ -1,5 +1,5 @@
 # Portfolio
-A sleek, high-performance developer portfolio built with **Next.js 15**, **Tailwind CSS**, and **Framer Motion**.
+**Next.js 15**, **Tailwind CSS**, and **Framer Motion**.
 ---
 ##  Key Features
 - **Smart Dark Mode**: Context API driven theme switching.
