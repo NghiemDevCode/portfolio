@@ -1,26 +1,97 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  font-family: outfit;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+}
+
+@theme {
+  --color-light-theme: #f8f8f6;
+  --color-light-hover: #fcf4ff;
+  --color-dark-hover: #2a004a;
+  --color-dark-theme: #11001F;
+  --color-primary-blue: #0c548b;
+  --color-card-bg-light: #ffffff;
+
+  --font-Outfit: "Outfit", sans-serif;
+  --font-Ovo: "Ovo", serif;
+
+  --shadow-cust-black: 4px 4px 0 #000;
+  --shadow-cust-white: 4px 4px 0 #fff;
+
+  --grid-template-columns-auto: repeat(auto-fit, minmax(200px, 1fr));
+
+  /* animation */
+  --animate-blink: blink 0.7s step-end infinite;
+  --animate-bounce-slow: bounce-slow 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes bounce-slow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@utility section-container {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  @media (min-width: 640px) {
+    padding-left: 8%;
+    padding-right: 8%;
+
+  }
+}
+
+@layer components {
+  .section-subtitle {
+    @apply text-center mb-2 text-lg font-Ovo;
+  }
+
+  .section-title {
+    @apply text-center text-5xl font-Ovo;
+  }
+
+  .btn-primary {
+    @apply px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 transition-all duration-500 hover:bg-gray-800 dark:bg-transparent dark:border-white/50 dark:hover:bg-dark-hover;
+  }
+
+  .btn-secondary {
+    @apply px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white transition-all duration-500 hover:bg-light-hover dark:text-black dark:border-none;
+  }
+
+  .tech-tag {
+    @apply bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full text-sm dark:text-white/70;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-2 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-dark-hover/30 dark:border-white/20 focus:border-primary-blue dark:focus:border-white transition-colors duration-300 placeholder:text-gray-400 dark:placeholder:text-white/30;
+  }
 }
