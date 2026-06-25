@@ -61,6 +61,7 @@ const ProjectDetail = () => {
                             src={currentProject.bgImage}
                             alt="Main Project"
                             fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"
                             className="object-cover group-hover:scale-105 duration-700"
                             priority
                         />
@@ -78,6 +79,7 @@ const ProjectDetail = () => {
                                         src={project.bgImage}
                                         alt="Side Project"
                                         fill
+                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 30vw, 20vw"
                                         className="object-cover group-hover:scale-110 duration-500"
                                     />
                                     <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
