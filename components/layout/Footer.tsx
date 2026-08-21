@@ -53,12 +53,12 @@ const Footer = () => {
                             >
                                 Privacy Policy
                             </button>
-                            <button
+                            {/* <button
                                 onClick={() => setModalContent(legalInfo.disclaimer)}
                                 className='hover:text-primary-blue dark:hover:text-white transition-colors underline underline-offset-4 cursor-pointer font-Ovo'
                             >
                                 Disclaimer
-                            </button>
+                            </button> */}
                         </div>
                     </div>
 
@@ -66,7 +66,7 @@ const Footer = () => {
                         <li className='flex items-center justify-center'>
                             <a target='_blank' href="https://github.com/NghiemDevCode" className='flex items-center gap-3 group'>
                                 <div className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer group-hover:-translate-y-1 duration-500'>
-                                    <Image src={assets.git} alt='GitHub' className='w-5 sm:w-7' />
+                                    <Image src={assets.github_icon} alt='GitHub' className='w-5 sm:w-7  dark:invert'  />
                                 </div>
                                 <span className='font-Ovo'>GitHub</span>
                             </a>
@@ -75,7 +75,7 @@ const Footer = () => {
                         <li className='flex items-center justify-center'>
                             <a target='_blank' href="#" className='flex items-center gap-3 group'>
                                 <div className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer group-hover:-translate-y-1 duration-500'>
-                                    <Image src={assets.linkedin} alt='LinkedIn' className='w-5 sm:w-7' />
+                                    <Image src={assets.linkedin} alt='LinkedIn' className='w-5 sm:w-7 ' />
                                 </div>
                                 <span className='font-Ovo'>LinkedIn</span>
                             </a>

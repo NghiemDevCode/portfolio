@@ -135,7 +135,7 @@ const Contact = () => {
               <h3 className='text-3xl font-semibold text-gray-700 dark:text-white mb-6 font-Ovo'>Contact Information</h3>
               <p className='text-gray-600 dark:text-gray-400 max-w-md mb-10 leading-relaxed font-Ovo'>
 
-                I'm always open to discussing new projects, creative collaborations, or opportunities to contribute to your success. Let's build something great together!
+                I'm always open to discussing new projects, creative collaborations or opportunities to contribute to your success. Let's build something great together!
                 {/* Tôi luôn sẵn lòng thảo luận về các dự án mới, sự cộng tác sáng tạo hoặc các cơ hội để đóng góp vào thành công của bạn. Hãy cùng nhau tạo nên những điều tuyệt vời! */}
               </p>
 
@@ -148,10 +148,11 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className='text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold'>Email</p>
-                    <p className='text-lg text-gray-700 dark:text-white'>mailtestcode0001@gmail.com</p>
+                    <p className='text-lg text-gray-700 dark:text-white'>nghiem.devcode@gmail.com</p>
                   </div>
+                  {/* mailtestcode0001@gmail.com */}
                 </motion.div>
-
+                {/* 
                 <motion.div
                   whileHover={{ x: 10 }}
                   className='flex items-center gap-5'>
@@ -162,9 +163,9 @@ const Contact = () => {
                     <p className='text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold'>Call Me</p>
                     <p className='text-lg text-gray-700 dark:text-white'>+84 123 456 789</p>
                   </div>
-                </motion.div>
+                </motion.div> */}
 
-                <motion.div
+                {/* <motion.div
                   whileHover={{ x: 10 }}
                   className='flex items-center gap-5'>
                   <div className='w-14 h-14 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center shrink-0'>
@@ -174,7 +175,7 @@ const Contact = () => {
                     <p className='text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider font-semibold'>Location</p>
                     <p className='text-lg text-gray-700 dark:text-white'>Viet Nam</p>
                   </div>
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.div>
           </div>
@@ -231,15 +232,17 @@ const Contact = () => {
                   rows={6} placeholder='Message' required
                   className='input-field resize-none' name='message'></motion.textarea>
               </div>
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
                 type='submit'
-                className='py-3 px-12 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border-[0.5px] dark:hover:bg-dark-hover'
+                className='btn-primary py-4 px-10 mx-auto  cursor-pointer'
               >
                 Submit now
-                <Image src={assets.right_arrow_white} alt='' className='w-4' />
+                <Image src={assets.right_arrow_white} alt='arrow icon' className='w-4' />
               </motion.button>
+
 
               {result && <p className='mt-4 text-center text-gray-600 dark:text-gray-400 font-Ovo'>{result}</p>}
             </form>

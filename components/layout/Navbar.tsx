@@ -31,12 +31,12 @@ const Navbar = () => {
             <nav className={`w-full fixed top-0 left-0 py-4 z-50 ${isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm dark:bg-dark-theme dark:shadow-white/20" : ""}`}>
 
                 <div className='section-container flex items-center justify-between w-full'>
-                    <Link href="/#home">
+                    <a href="#home">
                         {/* <Image src={isDarkMode ? assets.logo_dark : assets.logo} alt="logo" className='w-28 cursor-pointer mr-14'></Image> */}
                         <span className='text-3xl sm:text-4xl font-bold font-Ovo tracking-wide cursor-pointer text-primary-blue dark:text-white'>
                             Portfolio
                         </span>
-                    </Link>
+                    </a>
 
                     <ul className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${isScroll ? "" : "bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent"} `}>
                         <li>

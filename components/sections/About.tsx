@@ -5,7 +5,7 @@ import { motion } from "motion/react"
 import { useTheme } from '@/context/ThemeContext'
 
 const About = () => {
-      const { isDarkMode } = useTheme();
+    const { isDarkMode } = useTheme();
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -39,7 +39,7 @@ const About = () => {
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                         className='w-64 sm:w-80 rounded-3xl max-w-none'>
-                        <Image src={assets.user_image} alt='user' className='w-full rounded-3xl' />
+                        <Image src={assets.user_image} alt='user' priority  className='w-full rounded-3xl' />
                     </motion.div>
                     <motion.div
                         initial={{ opacity: 0 }}
@@ -48,8 +48,8 @@ const About = () => {
                         viewport={{ once: true }}
                         className='flex-1'>
                         <p className='text-lg md:text-xl mb-10 font-Ovo'>
-                            As a dedicated Backend Developer, I specialize in creating efficient APIs and complex systems. My ability to bridge the gap between Frontend and Backend allows me to operate as a versatile Fullstack engineer, ensuring seamless integration and a polished user experience from database to interface
-                            {/* Là một Backend Developer tận tâm, tôi chuyên về tạo ra các API hiệu quả. Khả năng kết nối giữa Frontend và Backend cho phép tôi hoạt động như một kỹ sư Fullstack linh hoạt, đảm bảo sự tích hợp liền mạch từ cơ sở dữ liệu đến giao diện người dùng. */}
+                            I'm a Fullstack Developer with a strong backend foundation, specializing in building efficient APIs. This deep understanding of the backend allows me to bridge Frontend and Backend seamlessly, delivering integrated solutions from database to interface.
+                            {/* Tôi là một Fullstack Developer với nền tảng Backend vững chắc, chuyên về xây dựng các API hiệu quả. Chính sự am hiểu sâu về backend giúp tôi kết nối liền mạch giữa Frontend và Backend, mang lại giải pháp tích hợp từ cơ sở dữ liệu đến giao diện. */}
                         </p>
                         {/* <motion.ul
                         initial={{ opacity: 0 }}
@@ -83,12 +83,15 @@ const About = () => {
                                         <h3 className='font-bold text-gray-700 dark:text-white'>{title}</h3>
                                     </div>
                                     <ul className='grid grid-cols- gap-y-3 text-sm text-gray-600 dark:text-gray-300 font-Ovo'>
-                                        {skills.map((skill, i) => (
-                                            <li key={i} className='flex items-center gap-2'>
-                                                <Image src={skill.icon} alt='' className='w-4' />
-                                                <span>{skill.name}</span>
-                                            </li>
-                                        ))}
+                                        {skills.map((skill, i) => {
+                                            const Icon = skill.icon;
+                                            return (
+                                                <li key={i} className='flex items-center gap-2'>
+                                                    <Icon className='w-4 h-4' />
+                                                    <span>{skill.name}</span>
+                                                </li>
+                                            );
+                                        })}
                                     </ul>
                                 </motion.li>
                             ))}

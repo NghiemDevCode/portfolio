@@ -94,7 +94,7 @@ const Work = () => {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: 0.7 }}
                     viewport={{ once: true }}
-                    className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>Explore my latest full-stack projects, where I combine advanced backend logic with seamless user experiences to solve real-world industrial and business challenges.</motion.p>
+                    className='text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo'>Explore my latest full-stack projects, where I combine advanced backend logic with seamless user experiences to solve real-world business and industrial challenges.</motion.p>
                 {/* (Dịch: Khám phá những dự án Fullstack mới nhất của tôi, nơi tôi kết hợp logic Backend nâng cao với trải nghiệm người dùng mượt mà để giải quyết các bài toán thực tế trong kinh doanh và công nghiệp.) */}
                 <motion.div
                     variants={fadeIn}
@@ -109,14 +109,14 @@ const Work = () => {
                             transition={{ duration: 0.3 }}
                             key={index}
                             // Thêm flex flex-col h-full để thẻ luôn cao bằng nhau trong cùng 1 hàng
-                            className='bg-card-bg-light dark:bg-[#060816] rounded-[2rem] border border-gray-200 dark:border-white/10 p-5 pb-10 cursor-pointer group shadow-sm hover:shadow-md duration-300 flex flex-col h-full' >
+                            className='bg-card-bg-light dark:bg-dark-hover/60 rounded-[2rem] border border-gray-200 dark:border-white/15 p-5 pb-10 cursor-pointer group shadow-sm hover:shadow-md duration-300 flex flex-col h-full' >
 
                             <div className='rounded-2xl overflow-hidden aspect-square relative'>
                                 <Image
                                     src={project.bgImage}
                                     alt={project.title}
                                     fill
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 50vw"
 
                                     className='object-cover group-hover:scale-110 duration-500'
                                 />
@@ -145,9 +145,9 @@ const Work = () => {
 
                                 <Link href={`/projects/${project.slug}`}>
                                     <div className='flex justify-center mt-auto'>
-                                        <div className='flex items-center justify-center gap-2 text-sm font-medium py-2.5 px-10 rounded-full bg-black/80 text-white hover:bg-black duration-500 transition-all dark:bg-transparent dark:border-[0.5px] dark:border-white/90 dark:hover:bg-dark-hover'>
+                                        <div className='btn-primary text-sm py-2.5 px-8 cursor-pointer'>
                                             <span>View Project</span>
-                                            <Image src={isDarkMode ? assets.right_arrow_bold_dark : assets.right_arrow_bold} alt='arrow icon' className='w-4' />
+                                            <Image src={assets.right_arrow_white} alt='arrow icon' className='w-4' />
                                         </div>
 
                                     </div>

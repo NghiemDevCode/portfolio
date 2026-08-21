@@ -57,7 +57,7 @@ const Header = () => {
                     viewport={{ once: true }}
                     className='order-1 md:order-2'   >
                     <div className='w-48 h-48 md:w-72 md:h-72 lg:w-100 lg:h-100 rounded-full overflow-hidden border-4 border-primary-blue/60 animate-bounce-slow'>
-                        <Image src={assets.profile_img} alt="Profile" className='w-full h-full object-cover' />
+                        <Image src={assets.profile_img} alt="Profile" priority className='w-full h-full object-cover' />
                     </div>
                 </motion.div>
 
@@ -100,7 +100,7 @@ const Header = () => {
                         viewport={{ once: true }}
                         className='text-lg md:text-xl text-gray-600 dark:text-gray-400 font-Ovo leading-relaxed'
                     >
-                        "I specialize in building scalable, end-to-end web applications with a focus on seamless user experiences and robust backend systems."
+                        "I specialize in building full-stack web applications, with a focus on seamless user experience and robust backend systems."
                         {/* (Tôi chuyên xây dựng các ứng dụng web toàn diện, tập trung vào trải nghiệm người dùng mượt mà và hệ thống backend mạnh mẽ.) */}
                     </motion.p>
 
