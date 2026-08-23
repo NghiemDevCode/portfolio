@@ -13,7 +13,6 @@ It includes personal introduction, skills, services, selected projects, dark mod
 ## Live Demo
 
 * Website: https://nguyen-van-nghiem.vercel.app
-* Repository: https://github.com/NghiemDevCode/portfolio
 
 ## Features
 
@@ -38,56 +37,6 @@ It includes personal introduction, skills, services, selected projects, dark mod
 * Web3Forms
 * Vercel
 
-## Project Structure
-
-```txt
-portfolio/
-  app/              # Next.js app directory
-  assets/           # Images and static assets
-  components/       # Reusable UI components and page sections
-  constants/        # Shared constants and animation configs
-  context/          # Global context, such as theme provider
-  hooks/            # Custom React hooks
-  public/           # Public static files
-```
-
-## Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/NghiemDevCode/portfolio.git
-cd portfolio
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Open the project in your browser:
-
-```txt
-http://localhost:3000
-```
-
-## Environment Variables
-
-Create a `.env.local` file in the root directory:
-
-```env
-NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your_web3forms_access_key
-```
-
-This variable is used for the contact form submission.
-
 ## Main Sections
 
 * Header
@@ -96,16 +45,6 @@ This variable is used for the contact form submission.
 * Projects
 * Contact
 * Footer
-
-## Deployment
-
-This project is deployed on Vercel.
-
-To create a production build locally:
-
-```bash
-npm run build
-```
 
 ## Purpose
 
@@ -119,7 +58,6 @@ NghiemDevCode
 Backend / Fullstack Developer
 
 * GitHub: https://github.com/NghiemDevCode
-* Portfolio: https://nguyen-van-nghiem.vercel.app
 
 ## Copyright
 
