@@ -37,15 +37,6 @@ It includes personal introduction, skills, services, selected projects, dark mod
 * Web3Forms
 * Vercel
 
-## Main Sections
-
-* Header
-* About
-* Services
-* Projects
-* Contact
-* Footer
-
 ## Purpose
 
 This project is used as my personal developer portfolio and online profile.
