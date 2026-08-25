@@ -125,15 +125,13 @@ const Work = () => {
 
                             <div className='mt-6 px-2 flex flex-col flex-grow'>
                                 {/* Giới hạn 2 dòng và min-height cho tiêu đề */}
-                                <h3 className='text-2xl font-bold dark:text-white mb-2 line-clamp-2 min-h-[4rem]'>
+                                <h3 className='text-xl font-bold dark:text-white mb-2 line-clamp-2 min-h-[4rem] whitespace-pre-line'>
                                     {project.title}
                                 </h3>
 
-
-                                <p className='text-sm text-gray-500 dark:text-gray-400 mb-5 line-clamp-2 min-h-[2.5rem]'>
+                                <p className='text-sm text-gray-500 dark:text-gray-400 mb-5 line-clamp-3 min-h-[2.5rem]'>
                                     {project.description}
                                 </p>
-
 
                                 {/* <div className='flex flex-wrap gap-2 mb-6 text-sm min-h-[4rem] items-start'>
                                     {project.tags.map((tag, index) => (
@@ -143,15 +141,25 @@ const Work = () => {
                                     ))}
                                 </div> */}
 
-                                <Link href={`/projects/${project.slug}`}>
+                                {/* <Link href={`/projects/${project.slug}`}>
                                     <div className='flex justify-center mt-auto'>
                                         <div className='btn-primary text-sm py-2.5 px-8 cursor-pointer'>
                                             <span>View Project</span>
                                             <Image src={assets.right_arrow_white} alt='arrow icon' className='w-4' />
                                         </div>
-
                                     </div>
-                                </Link>
+                                </Link> */}
+
+                                <a href={project.link || '#'}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className='flex justify-center mt-auto' >
+                                    <div className='btn-primary text-sm py-2.5 px-8 cursor-pointer'>
+                                        <span>View Project</span>
+                                        <Image src={assets.right_arrow_white} alt='arrow icon' className='w-4' />
+                                    </div>
+                                </a>
+
                             </div>
 
                         </motion.div>

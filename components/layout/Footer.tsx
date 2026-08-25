@@ -1,4 +1,4 @@
-import { assets } from '@/assets/assets'
+import { assets, socialLinks } from '@/assets/assets'
 import { useTheme } from '@/context/ThemeContext'
 import Image from 'next/image'
 import React, { useState } from 'react'
@@ -63,24 +63,27 @@ const Footer = () => {
                     </div>
 
                     <ul className='flex items-center gap-10 justify-center mt-4 sm:mt-0'>
-                        <li className='flex items-center justify-center'>
-                            <a target='_blank' href="https://github.com/NghiemDevCode" className='flex items-center gap-3 group'>
-                                <div className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer group-hover:-translate-y-1 duration-500'>
-                                    <Image src={assets.github_icon} alt='GitHub' className='w-5 sm:w-7  dark:invert'  />
-                                </div>
-                                <span className='font-Ovo'>GitHub</span>
-                            </a>
-                        </li>
+                        {socialLinks.map((social) => (
+                            <li key={social.name} className='flex items-center justify-center'>
+                                <a target='_blank' href={social.url} className='flex items-center gap-3 group'>
+                                    <div className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer group-hover:-translate-y-1 duration-500'>
+                                        <Image src={social.icon} alt={social.name} className='w-5 sm:w-7 dark:invert' />
+                                    </div>
+                                    <span className='font-Ovo'>{social.name}</span>
+                                </a>
+                            </li>
 
-                        <li className='flex items-center justify-center'>
-                            <a target='_blank' href="#" className='flex items-center gap-3 group'>
-                                <div className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer group-hover:-translate-y-1 duration-500'>
-                                    <Image src={assets.linkedin} alt='LinkedIn' className='w-5 sm:w-7 ' />
-                                </div>
-                                <span className='font-Ovo'>LinkedIn</span>
-                            </a>
-                        </li>
+                            // <li className='flex items-center justify-center'>
+                            //     <a target='_blank' href="#" className='flex items-center gap-3 group'>
+                            //         <div className='flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer group-hover:-translate-y-1 duration-500'>
+                            //             <Image src={assets.linkedin} alt='LinkedIn' className='w-5 sm:w-7 ' />
+                            //         </div>
+                            //         <span className='font-Ovo'>LinkedIn</span>
+                            //     </a>
+                            // </li>
+                        ))}
                     </ul>
+
                 </div>
             </div>
 

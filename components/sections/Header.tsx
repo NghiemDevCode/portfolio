@@ -7,7 +7,7 @@ import { useTypewriter } from '@/hooks/useTypewriter';
 import { useTheme } from '@/context/ThemeContext'
 
 const Header = () => {
-       const { isDarkMode } = useTheme();
+    const { isDarkMode } = useTheme();
     // Typewriter
     const text = useTypewriter(["Web Developer", "Frontend Developer", "Backend Developer"]);
 
@@ -78,7 +78,7 @@ const Header = () => {
                         transition={{ duration: 0.8, delay: 0.5 }}
                         viewport={{ once: true }}
                         className='text-4xl sm:text-6xl lg:text-7xl text-primary-blue font-bold font-Ovo leading-tight' >
-                        Nguyen Van A
+                        Nguyen Van 
                     </motion.h1>
 
                     <motion.p
@@ -117,7 +117,7 @@ const Header = () => {
                             whileInView={{ y: 0, opacity: 1 }}
                             transition={{ duration: 0.6, delay: 1.2 }}
                             viewport={{ once: true }}
-                            href='/sample-resume.pdf' download className='btn-secondary'>my resume <Image src={assets.download_icon} alt='' className='w-4' /></motion.a>
+                            href='/Nguyen_Van_Nghiem_Fullstack.pdf' download className='btn-secondary'>my resume <Image src={assets.download_icon} alt='' className='w-4' /></motion.a>
                     </div>
                 </div>
             </div>

@@ -45,6 +45,7 @@ import js_icon from "./js-icon.png";
 import ts_icon from "./ts-icon.png";
 import github_icon from "./github-icon.png";
 import about_image from "./about_image.png";
+
 import {
   SiHtml5,
   SiTailwindcss,
@@ -56,6 +57,7 @@ import {
   SiFigma,
   SiRedis,
 } from "react-icons/si";
+
 import {
   FaReact,
   FaCss3Alt,
@@ -63,6 +65,7 @@ import {
   FaPlug,
   FaGithub,
 } from "react-icons/fa";
+
 import { TbSparkles } from "react-icons/tb";
 
 export const assets = {
@@ -117,121 +120,33 @@ export const assets = {
 
 export const workData = [
   {
-    title: "MechSEO - Mechanical Engineering Services",
+    title: "Feastify - Order & Payment System",
     description:
-      '"High-performance SEO platform with automated quoting system."',
-    tags: ["Next.js", "Tailwind CSS", "Node.js", "TypeScript"],
+      '"Comprehensive order and payment management system for catering services."',
+    // Hệ thống quản lý đơn hàng và thanh toán toàn diện cho các dịch vụ ăn uống.
     bgImage: "/work-1.png",
     slug: "mech-seo",
-    details: {
-      overview: {
-        summary:
-          "Hệ thống quản lý dịch vụ cơ khí tối ưu SEO, tích hợp báo giá tự động giúp doanh nghiệp tiếp cận khách hàng hiệu quả.",
-        role: "Fullstack Developer (Cá nhân) - Chịu trách nhiệm từ thiết kế Database đến triển khai module SEO tự động.",
-        techStack: ["Next.js", "Prisma", "PostgreSQL", "Cloudflare"],
-      },
-      challenges: [
-        {
-          issue:
-            "Tối ưu hóa SEO cho hàng trăm trang sản phẩm cơ khí mà không làm chậm tốc độ tải trang.",
-          solution:
-            "Sử dụng Server-side Rendering (SSR) kết hợp với Dynamic Metadata API của Next.js.",
-        },
-      ],
-      architecture: {
-        description:
-          "Kiến trúc Monolith với Next.js App Router, sử dụng Prisma ORM để quản lý Database PostgreSQL chặt chẽ.",
-        databaseSchema: null, // Thêm link ảnh sơ đồ database vào đây
-      },
-      features: [
-        "Hệ thống quản trị nội dung (CMS) chuẩn SEO.",
-        "Tự động tạo file báo giá PDF chuyên nghiệp.",
-        "Tích hợp Schema Markup hiển thị kết quả Google nổi bật.",
-      ],
-      results: {
-        performance: "95+ Lighthouse Score",
-        lessons:
-          "Hiểu sâu hơn về Technical SEO và cách tối ưu hóa dữ liệu ngành B2B.",
-      },
-    },
+    link: "",
   },
+
   {
-    title: "CollabTask Management ",
+    title: "Feastify - Inventory & Staff",
     description:
-      '"Socket.io-powered collaboration platform for instant team communication & task sync."',
-    tags: ["Next.js", "Tailwind CSS", "Nestjs.js", "TypeScript", "PostgreSQL"],
+      '"Warehouse and staff management system with role-based access control for catering operations."',
+    // Hệ thống quản lý kho và nhân viên với khả năng kiểm soát truy cập dựa trên vai trò cho các hoạt động phục vụ ăn uống.
     bgImage: "/work-2.png",
     slug: "collab-task-management",
-    details: {
-      overview: {
-        summary:
-          "Nền tảng quản lý công việc nhóm thời gian thực, tập trung vào sự tương tác tức thì và đồng bộ hóa dữ liệu.",
-        role: "Backend Lead - Thiết kế hệ thống WebSocket và cấu trúc Database cho tính năng Real-time.",
-        techStack: ["Next.js", "NestJS", "Socket.io", "PostgreSQL", "Redis"],
-      },
-      challenges: [
-        {
-          issue:
-            "Đồng bộ hóa dữ liệu giữa hàng trăm người dùng cùng lúc mà không gây xung đột.",
-          solution:
-            "Sử dụng Redis Pub/Sub để phát tán sự kiện và triển khai cơ chế Optimistic UI ở Frontend.",
-        },
-      ],
-      architecture: {
-        description:
-          "Kiến trúc Client-Server tách biệt, Backend NestJS xử lý logic nghiệp vụ và WebSocket.",
-        databaseSchema: null,
-      },
-      features: [
-        "Nhắn tin và cập nhật trạng thái Task thời gian thực.",
-        "Kéo thả (Drag & Drop) quản lý bảng Kanban.",
-        "Hệ thống thông báo đẩy (Push Notifications).",
-      ],
-      results: {
-        performance: "< 50ms Latency for messages",
-        lessons:
-          "Kỹ năng xử lý concurrency và quản lý state phức tạp ở cả hai phía.",
-      },
-    },
+    link: "",
   },
+
   {
-    title: "CelebJoy Restaurant",
+    title: "MechSEO - Business Website",
     description:
-      '"Professional wedding & dining ERP with NestJS backend and intelligent menu generation algorithm."',
-    tags: ["Next.js", "Tailwind CSS", "Nestjs.js", "TypeScript", "PostgreSQL"],
+      '"SEO-optimized website for mechanical engineering services, built for speed and search visibility. "',
+    // Trang web được tối ưu hóa SEO cho các dịch vụ kỹ thuật cơ khí, được xây dựng để đảm bảo tốc độ và khả năng hiển thị khi tìm kiếm
     bgImage: "/work-3.png",
     slug: "celeb-joy",
-    details: {
-      overview: {
-        summary:
-          "Hệ thống ERP chuyên dụng cho nhà hàng tiệc cưới, tối ưu hóa quy trình đặt tiệc và quản lý nguyên liệu.",
-        role: "Fullstack Developer - Phát triển thuật toán gợi ý thực đơn và module quản lý kho.",
-        techStack: ["Next.js", "NestJS", "TypeScript", "PostgreSQL"],
-      },
-      challenges: [
-        {
-          issue:
-            "Tính toán định mức nguyên liệu phức tạp cho các bữa tiệc hàng nghìn khách.",
-          solution:
-            "Xây dựng engine tính toán tự động dựa trên công thức nấu ăn và số lượng khách đặt.",
-        },
-      ],
-      architecture: {
-        description:
-          "Kiến trúc hướng Module (Modular Monolith) giúp dễ dàng bảo trì và mở rộng các tính năng mới.",
-        databaseSchema: null,
-      },
-      features: [
-        "Thuật toán gợi ý thực đơn thông minh.",
-        "Hệ thống quản lý kho và định mức nguyên liệu.",
-        "Báo cáo doanh thu và thống kê chi tiết.",
-      ],
-      results: {
-        performance: "Giảm 30% thời gian lên thực đơn",
-        lessons:
-          "Kỹ năng phân tích nghiệp vụ (BA) và chuyển đổi logic kinh doanh vào code.",
-      },
-    },
+    link: "",
   },
 ];
 
@@ -313,7 +228,7 @@ export const skillData = [
       { name: "Node.js/Nest.js", icon: SiNodedotjs },
       { name: "PostgreSQL", icon: FaDatabase },
       { name: "MySQL", icon: FaDatabase },
-       { name: "Redis", icon: SiRedis }, 
+      { name: "Redis", icon: SiRedis },
       { name: "Socket.IO", icon: FaPlug },
     ],
   },
@@ -328,4 +243,17 @@ export const skillData = [
       { name: "AI-Assisted Coding", icon: TbSparkles },
     ],
   },
+];
+
+export const socialLinks = [
+  {
+    name: 'GitHub',
+    url: 'https://github.com/NghiemDevCode',
+    icon: assets.github_icon,
+  },
+  {
+    name: 'LinkedIn',
+    url: 'https://www.linkedin.com/in/nghi%C3%AAm-nguy%E1%BB%85n-ab4119131/',
+    icon: assets.linkedin,
+  }
 ];
